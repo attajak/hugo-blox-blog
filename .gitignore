@@ -1,8 +1,8 @@
 # Hugo
 public
-resouces
+resources
 .hugo_build.lock
-.hugo_stats.json
+hugo_stats.json
 
 # Node.js
 node_modules

@@ -1,0 +1,13 @@
+run = "hugo server --baseURL='/' --bind='0.0.0.0'"
+entrypoint = "README.md"
+modules = ["go-1.21"]
+
+[nix]
+channel = "stable-23_11"
+
+[deployment]
+run = ["sh", "-c", "hugo --gc --minify"]
+
+[[ports]]
+localPort = 1313
+externalPort = 80

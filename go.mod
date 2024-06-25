@@ -1,6 +1,6 @@
 module github.com/attajak/hugo-blox-blog
 
-go 1.22.3
+go 1.19
 
 require (
 	github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify v1.1.2-0.20240602152624-676a1b20ee9f
