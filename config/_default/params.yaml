@@ -15,7 +15,7 @@ marketing:
     local_business_type: ''
     org_name: ''
     description: 'A highly-customizable Hugo blog theme powered by Hugo Blox Builder.'
-    twitter: 'GetResearchDev'
+    twitter: 'attajak'
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -51,10 +51,10 @@ locale:
 # Site features
 features:
   math:
-    enable: false
+    enable: true
   privacy_pack:
-    enable: false
+    enable: true
   repository:
-    url: 'https://github.com/HugoBlox/hugo-blox-builder/'
-    content_dir: starters/blog/content
+    url: 'https://github.com/attajak/hugo-blox-blog/'
+    content_dir: content
     branch: main
