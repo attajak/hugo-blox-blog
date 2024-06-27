@@ -1,12 +1,18 @@
-run = "hugo server --baseURL='/' --bind='0.0.0.0'"
+run = "hugo server --gc --minify --baseURL='/' --bind='0.0.0.0' && npx pagefind --source 'public'"
 entrypoint = "README.md"
-modules = ["go-1.21"]
+
+[packager]
+language = "nodejs"
+
+[packager.features]
+packageSearch = true
+guessImports = true
 
 [nix]
-channel = "stable-23_11"
+channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "hugo --gc --minify"]
+run = ["sh", "-c", "hugo --gc --minify && npx pagefind --source 'public'"]
 
 [[ports]]
 localPort = 1313

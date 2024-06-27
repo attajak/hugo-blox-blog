@@ -51,9 +51,9 @@ locale:
 # Site features
 features:
   math:
-    enable: false
+    enable: true
   privacy_pack:
-    enable: false
+    enable: true
   repository:
     url: 'https://github.com/attajak/hugo-blox-blog/'
     content_dir: content
