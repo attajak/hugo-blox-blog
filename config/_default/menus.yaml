@@ -5,9 +5,33 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: Topics
-    url: tags/
+  - name: Blog
+    identifier: blog
+    # url: /blog/
     weight: 20
+  - name: Blog
+    parent: blog
+    url: blog/
+    weight: 21
+  - name: Categories
+    parent: blog
+    url: categories/
+    weight: 22
+  - name: Tags
+    parent: blog
+    url: tags/
+    weight: 23
+  - name: About
+    identifier: about
+    weight: 30
+  - name: About
+    parent: about
+    url: about/
+    weight: 31
+  - name: Contact
+    parent: about
+    url: contact/
+    weight: 32
   - name: Uses
     url: uses/
-    weight: 30
+    weight: 40
