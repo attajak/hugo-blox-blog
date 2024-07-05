@@ -1,23 +1,16 @@
-run = "hugo server --gc --minify --baseURL='/' --bind='0.0.0.0' && npx pagefind --source 'public'"
+run = "hugo --gc --minify -b / && npx pagefind --source 'public' && miniserve public --index index.html"
 entrypoint = "README.md"
 hidden = [".config"]
-
-[packager]
-language = "nodejs"
-
-[packager.features]
-packageSearch = true
-guessImports = true
+modules = ["nodejs-20", "go-1.21"]
 
 [nix]
 channel = "stable-24_05"
 
 [deployment]
-# run = ["sh", "-c", "hugo --gc --minify && npx pagefind --source 'public'"]
-build = ["hugo --gc --minify && npx pagefind --source 'public"]
+build = ["hugo --gc --minify", "npx pagefind --source 'public"]
 deploymentTarget = "static"
 publicDir = "public"
 
 [[ports]]
-localPort = 1313
+localPort = 8080
 externalPort = 80
