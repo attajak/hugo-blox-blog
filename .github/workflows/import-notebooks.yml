@@ -17,7 +17,7 @@ on:
 
 jobs:
   hugoblox:
-    if: github.repository_owner != 'attajak'
+    if: github.repository_owner != 'HugoBlox'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repo
