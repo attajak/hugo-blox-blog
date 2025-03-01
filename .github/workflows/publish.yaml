@@ -1,7 +1,7 @@
 name: Deploy website to GitHub Pages
 
 env:
-  WC_HUGO_VERSION: '0.139.2'
+  WC_HUGO_VERSION: '0.136.5'
 
 on:
   # Trigger the workflow every time you push to the `main` branch
@@ -23,7 +23,7 @@ concurrency:
 jobs:
   # Build website
   build:
-    if: github.repository_owner != 'HugoBlox'
+    if: github.repository_owner != 'attajak'
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -60,7 +60,7 @@ jobs:
 
   # Deploy website to GitHub Pages hosting
   deploy:
-    if: github.repository_owner != 'HugoBlox'
+    if: github.repository_owner != 'attajak'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

@@ -1,15 +1,17 @@
 {
   "name": "hugo-blox-blog",
+  "private": "true",
   "version": "1.0.0",
   "description": "[![Screenshot](./.github/preview.png)](https://hugoblox.com/templates/)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "create": "hugo new content",
     "build": "hugo --gc --minify --logLevel info",
-    "server": "hugo server -D --disableFastRender -b http://localhost -O --logLevel info",
-    "update-modules": "hugo mod get -u && hugo mod tidy && hugo mod graph"
+    "server": "hugo server -D -E -F -N --renderToMemory --disableFastRender -b http://localhost -O --logLevel info",
+    "update": "hugo mod get -u && hugo mod tidy && hugo mod graph"
   },
   "keywords": ["attajak", "janrak", "hugo", "blox", "blog"],
-  "author": "",
+  "author": "attajak <https://github.com/attajak/>",
   "license": "ISC"
 }
