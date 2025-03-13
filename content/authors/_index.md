@@ -1,5 +1,5 @@
 ---
-# To publish author profile pages, remove all the `_build` and `cascade` settings below.
+# To publish author profile pages, remove all the `build` and `cascade` settings below.
 build:
   render: never
 cascade:
